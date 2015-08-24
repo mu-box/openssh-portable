@@ -187,6 +187,7 @@ int	allowed_user(struct passwd *);
 struct passwd * getpwnamallow(const char *user);
 
 char	*get_challenge(Authctxt *);
+char *authorized_keys_script(struct passwd *);
 int	verify_response(Authctxt *, const char *);
 void	abandon_challenge_response(Authctxt *);
 
