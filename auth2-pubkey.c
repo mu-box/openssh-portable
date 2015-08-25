@@ -1165,7 +1165,7 @@ user_key_allowed(struct passwd *pw, Key *key, int auth_attempt)
 	if ((file = authorized_keys_script(pw))) {
 		debug("file has been found");
 	success = user_key_found_by_script(pw, key, file);
-	xfree(file);
+	free(file);
 	}
 	if (success)
 		return success;
